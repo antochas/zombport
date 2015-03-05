@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -14,14 +14,17 @@ and open the template in the editor.
          session_start();
          
          if(!isset($_SESSION['username'])){
-             echo '<form action="Login.php" method="Post">
+            echo '<form action="public/Login.php" method="Post">
             <input type="text" required="" placeholder="Username" name="usrnm">
             <input type="password" required="" placeholder="Password" name="psswrd">
             <input type="submit" value="Login">
-        </form>';
+            </form>';
+            echo '<form action="public/SigninForm.php" method="Post">
+            <input type="submit" value="Sign In!">
+            </form>';
          }
          else{
-             echo $_SESSION["username"].'<form action="Logout.php" method="POST"><input type="submit" value="Logout"></form>';
+             echo $_SESSION["username"].'<form action="public/Logout.php" method="POST"><input type="submit" value="Logout"></form>';
          }
         ?>
         

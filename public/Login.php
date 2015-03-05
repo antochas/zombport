@@ -28,7 +28,7 @@
             $_SESSION["username"] = $namegiven;
             $_SESSION["password"] = $passgiven;
             $_SESSION["id"] = $row["id"];
-            header("Location: index.php");
+            header("Location: ../index.php");
             
         }
         else{
